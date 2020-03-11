@@ -1,0 +1,189 @@
+#wrapper,
+.container { min-width: 320px; }
+
+@media only screen and (min-width: 1024px) and (max-width: 1280px) {
+	
+	.featured-title,
+	.single .post-title { font-size: 28px; }
+	.post-list .post-inner { padding-left: 140px; }
+	.post-list .post-thumbnail { max-width: 120px; margin-left: -140px; }
+	
+}
+@media only screen and (min-width: 1024px) and (max-width: 1120px) {
+	
+	.post-grid .post-title { font-size: 18px; }
+	
+}
+
+
+/* ------------------------------------------------------------------------- *
+ *  1280px > 1024px, 1023px > 0
+/* ------------------------------------------------------------------------- */
+@media only screen and (min-width: 1024px) and (max-width: 1280px) {
+	
+	#split:before { right: 55%; }
+	#split-left { width: 45%; } 
+	#split-right { width: 55%; }
+	#split-sidebar { width: 55%; }
+	
+}
+@media only screen and (max-width: 1023px) {
+	
+	#split:before,
+	.col-1c #split:before { display: none; }
+	#split-left,
+	#split-right,
+	.col-1c #split-left,
+	.col-1c #split-right { width: 100%; }
+	#split-sidebar { width: 60%; margin: 0 auto; float: none; }
+	
+	#split-left { background: #181818; }
+	.stickyfill { position: relative; }
+	.admin-bar .stickyfill { top: 0; }
+	
+	.home.paged #split-left,
+	.search #split-left,
+	.archive #split-left,
+	.error404 #split-left { display: none; }
+	.archive.category #split-left { display: block; }
+}
+
+
+/* ------------------------------------------------------------------------- *
+ *  Mobile (Mid Res) : 719px > 0px (480px & 320px)
+/* ------------------------------------------------------------------------- */
+@media only screen and (max-width: 719px) {
+	
+	#split-left-top,
+	#split-right-top { padding-top: 20px; padding-bottom: 20px; }
+	#split-sidebar { width: 100%; }
+	
+	/* layout */
+	.container { padding: 0; }
+	.grid { width: 100%; margin: 0 0 10px; }
+	
+	/* hide */
+	.site-description,
+	#header-top .social-links,
+	.image-caption { display: none; }
+	
+	/* base */
+	.pad { padding: 20px 20px 10px; }
+	.notebox { margin-bottom: 20px; font-size: 14px; z-index: 9; }
+	.entry { font-size: 14px; }
+	
+	/* text */
+	.entry h1 { font-size: 30px; letter-spacing: -0.7px; }
+	.entry h2 { font-size: 26px; letter-spacing: -0.5px; }
+	.entry h3 { font-size: 24px; letter-spacing: -0.3px; }
+	.entry h4 { font-size: 22px; letter-spacing: -0.3px; }
+	.entry h5 { font-size: 18px; }
+	.entry h6 { font-size: 16px; text-transform: uppercase; }
+
+	/* header */
+	#header .pad { padding: 0; }
+	.site-title { width: 100%; float: none; }
+	.site-title a { text-align: center; }
+	.toggle-search {  margin-right: 0; top: 80px; left: -1px; right: auto; padding-top: 13px; padding-bottom: 13px; }
+	.search-expand { width: 100%; margin-right: -30px; top: 130px; }
+	
+	/* footer */
+	#footer-bottom .pad { padding-top: 50px; padding-bottom: 40px; }
+	#footer-bottom .one-half.last { margin-bottom: 0; }
+	#footer-bottom { text-align: center; }
+	#footer-bottom #footer-logo { margin-left: auto; margin-right: auto; }
+	#footer-bottom .social-links { float: none; }
+	#footer-bottom .social-links li { margin-left: 4px; margin-right: 4px; }
+	
+	/* comments */
+	.comment-tabs { font-size: 14px; }
+	.commentlist li { font-size: 13px; }
+	.commentlist li ul li { padding-left: 10px; }
+	
+	/* page */
+	.page-title { font-size: 18px; }
+	.page-title strong { bottom: -12px; }
+	.pagination { margin-bottom: 30px; }
+	
+	/* blog */
+	.front-widgets { margin-right: 0;  }
+	.front-widget-col { width: 100%; }
+	.front-widget-inner { margin: 0; }
+	
+	.post-grid .post-row { margin-bottom: 0; padding-bottom: 0; margin-right: 0; }
+	.post-grid .post-inner { margin-bottom: 30px; margin-right: 0; }
+	.post-grid .post,
+	.post-grid .page { width: 100%; }
+	
+	.blog .post-list, 
+	.single .post-list, 
+	.archive .post-list, 
+	.search .post-list { padding: 0; }
+	.post-list .post-inner { padding-left: 120px; }
+	.post-list .post-thumbnail { margin-left: -120px; max-width: 100px; }
+	
+	.featured-title,
+	.single .post-title { font-size: 24px; }	
+	.post-title { font-size: 20px; }
+	.entry.excerpt { font-size: 14px; }
+	
+	.single .post-title { font-size: 20px; line-height: 1.5em; letter-spacing: 0; }
+	.single .post-byline { font-size: 12px; }
+	
+	.entry.share { padding-right: 0; }
+	.author-bio .bio-desc { font-size: 13px; }
+
+	.content .post-nav li { width: 100%; -webkit-box-shadow: none!important; box-shadow: none!important; }
+	.content .post-nav li a { min-height: 0; }
+	
+	.single .related-posts .post-title { font-size: 14px; }
+	.related-posts li { width: 50%; }
+	.related-posts li:nth-child(2) article { border-right-color: transparent; } 
+	.related-posts li:nth-child(3),
+	.related-posts li:nth-child(4) { display: none; }
+	
+	/* shortcodes */
+	.dropcap { font-size: 80px; }
+	
+}
+
+/* ------------------------------------------------------------------------- *
+ *  Mobile (Low Res) : 479px > 0 (320px)
+/* ------------------------------------------------------------------------- */
+@media only screen and (max-width: 479px) {
+	
+	/* layout */
+	.content,
+	.sidebar { width: 100%; float: none; margin-right: 0!important; margin-left: 0!important; }
+	.sidebar { width: 100%; display: block; float: none; }
+	
+	/* hide */
+	#split-left-top .social-links,
+	.mobile-sidebar-hide .sidebar { display: none; }
+	
+	/* base */
+	.pad { padding: 15px 15px 5px; }
+	.sidebar .widget { padding-left: 15px!important; padding-right: 15px!important; padding-top: 15px; padding-bottom: 15px; }
+	.notebox { margin-bottom: 15px; }
+	.gallery-caption { display: none; }
+	.post-nav li { padding-right: 15px; padding-left: 15px; }
+	
+	/* header */
+	.site-title { font-size: 32px; }
+
+	/* blog */
+	.sharrre { width: 50%; }
+	
+	.post-standard { padding-bottom: 10px; }
+	.post-standard .post-content { margin: 0; padding: 0; background: transparent; position: relative; z-index: 4; }
+	
+	.post-list .post-inner { padding-left: 0; }
+	.post-list .post-thumbnail { margin: 0 auto; float: none; max-width: 160px; margin-bottom: 20px; }
+	.blog .post-list, 
+	.single .post-list, 
+	.archive .post-list, 
+	.search .post-list { padding: 0 15px; }
+	.post-list .post-content { width: 100%; text-align: center; }
+	.post-list .post-meta li { float: none; }
+}
+
