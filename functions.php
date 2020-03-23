@@ -208,7 +208,7 @@ if ( ! function_exists( 'split_styles' ) ) {
 	
 	function split_styles() {
 		wp_enqueue_style( 'split-style', get_stylesheet_uri() );
-		if ( get_theme_mod('responsive','on') =='on' ) { wp_enqueue_style( 'split-responsive', get_template_directory_uri().'/responsive.css' ); }
+		wp_enqueue_style( 'split-responsive', get_template_directory_uri().'/responsive.css' );
 		wp_enqueue_style( 'split-font-awesome', get_template_directory_uri().'/fonts/all.min.css' );
 	}
 	
