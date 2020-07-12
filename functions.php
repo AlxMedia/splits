@@ -685,10 +685,6 @@ if ( ! function_exists( 'split_plugins' ) ) {
 				array(
 					'name' => esc_html__( 'WP-PageNavi', 'split' ),
 					'slug' => 'wp-pagenavi',
-				),
-				array(
-					'name' => esc_html__( 'Social Count Plus', 'split' ),
-					'slug' => 'social-count-plus',
 				)
 			);	
 			tgmpa( $plugins );
