@@ -144,8 +144,6 @@ a,
 .themeform button[type="button"],
 .themeform button[type="reset"],
 .themeform button[type="submit"],
-#nav-topbar.nav-container,
-#nav-topbar .nav ul,
 .post-comments,
 .post-tags a:hover,
 .widget_calendar caption,
@@ -161,16 +159,18 @@ a,
 .comment-tabs li.active a,
 .wp-pagenavi a:hover,
 .wp-pagenavi a:active,
-.wp-pagenavi span.current { border-bottom-color: '.esc_attr( get_theme_mod('color-1') ).'!important; }					
+.wp-pagenavi span.current { border-bottom-color: '.esc_attr( get_theme_mod('color-1') ).'!important; }	
+
+#wrap-nav-topbar { background: '.esc_attr( get_theme_mod('color-1') ).'; }
+#wrap-nav-topbar .nav-menu:not(.mobile) .menu ul { background: '.esc_attr( get_theme_mod('color-1') ).'; }
+#wrap-nav-topbar .nav-menu:not(.mobile) .menu ul:after { border-bottom-color: '.esc_attr( get_theme_mod('color-1') ).'; }
+#wrap-nav-topbar .nav-menu:not(.mobile) .menu ul ul:after { border-right-color: '.esc_attr( get_theme_mod('color-1') ).'; border-bottom-color: transparent; }				
 				'."\n";
 			}
 			// mobile menu color
 			if ( get_theme_mod('color-mobile-menu','#cd483c') != '#cd483c' ) {
 				$styles .= '
-#nav-mobile.nav-container { background-color: '.esc_attr( get_theme_mod('color-mobile-menu') ).'; }
-@media only screen and (min-width: 720px) {
-	#nav-mobile .nav ul { background-color: '.esc_attr( get_theme_mod('color-mobile-menu') ).'; }
-}			
+#wrap-nav-mobile .nav-menu.mobile { background-color: '.esc_attr( get_theme_mod('color-mobile-menu') ).'; }		
 				'."\n";
 			}
 			// footer menu color
@@ -179,11 +179,13 @@ a,
 #footer-bottom #back-to-top { color: rgba(255,255,255,0.7); }
 #footer-bottom #back-to-top:hover { color: #fff; }
 #footer-bottom { border-color: '.esc_attr( get_theme_mod('color-footer-menu') ).'; }
-#nav-footer.nav-container,
+#wrap-nav-footer,
 #footer-bottom #back-to-top { background-color: '.esc_attr( get_theme_mod('color-footer-menu') ).'; }
-@media only screen and (min-width: 720px) {
-	#nav-footer .nav ul { background-color: '.esc_attr( get_theme_mod('color-footer-menu') ).'; }
-}			
+#wrap-nav-footer .nav-menu:not(.mobile) .menu ul { background: '.esc_attr( get_theme_mod('color-footer-menu') ).'; }
+#wrap-nav-footer .nav-menu:not(.mobile) .menu ul:after { border-top-color: '.esc_attr( get_theme_mod('color-footer-menu') ).'; border-bottom-color: transparent;  }
+#wrap-nav-footer .nav-menu:not(.mobile) .menu ul ul:after { border-right-color: '.esc_attr( get_theme_mod('color-footer-menu') ).'; border-top-color: transparent; }
+
+#wrap-nav-footer .nav-menu.mobile { background: '.esc_attr( get_theme_mod('color-footer-menu') ).'; }
 				'."\n";
 			}
 			// footer color

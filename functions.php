@@ -95,6 +95,19 @@ if ( ! function_exists( 'split_setup' ) ) {
 add_action( 'after_setup_theme', 'split_setup' );
 
 
+/*  Custom navigation
+/* ------------------------------------ */
+require_once 'functions/nav.php';
+$nav = new \AlxMedia\Nav();
+$nav->enqueue(
+	[
+		'script' => 'js/nav.js',
+		'inline' => false,
+	]
+);
+$nav->init();
+
+
 /*  Custom logo
 /* ------------------------------------ */
 if ( ! function_exists( 'split_custom_logo' ) ) {
