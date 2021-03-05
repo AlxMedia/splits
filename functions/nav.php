@@ -46,7 +46,7 @@ class Nav {
 	 *
 	 * @var string
 	 */
-	protected $handle_prefix = 'alexmedia-nav';
+	protected $handle_prefix = 'alxmedia-nav';
 
 	/**
 	 * Init.
