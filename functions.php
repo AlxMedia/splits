@@ -97,8 +97,10 @@ add_action( 'after_setup_theme', 'split_setup' );
 
 /*  Custom navigation
 /* ------------------------------------ */
-add_action( 'wp', function() {
+if ( ! class_exists( '\AlxMedia\Nav' ) ) {
 	require_once 'functions/nav.php';
+}
+add_action( 'wp', function() {
 	$nav = new \AlxMedia\Nav();
 	$nav->enqueue(
 		[
