@@ -74,8 +74,8 @@ Source: https://stocksnap.io
 
 == Changelog ==
 
-= 1.4.8 - 2022-01-24 =
-* Updated to Kirki 4.0
+= 1.4.8 - 2022-03-15 =
+* Updated to Kirki 4.0.22
 
 = 1.4.7 - 2021-07-23 =
 * Disabled support for widgets block editor
