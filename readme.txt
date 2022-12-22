@@ -63,6 +63,11 @@ Copyright (c) Chris Coyier
 License: WTFPL
 Source: http://fitvidsjs.com/
 
+Stickyfill
+Copyright (c) Oleg
+License: MIT
+Source: https://github.com/wilddeer/stickyfill
+
 Kirki
 Copyright (c) David Vongries
 License: MIT
