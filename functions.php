@@ -94,11 +94,11 @@ add_action( 'after_setup_theme', 'splits_setup' );
 
 /*  Custom navigation
 /* ------------------------------------ */
-if ( ! class_exists( '\AlxMedia\Nav' ) ) {
+if ( ! class_exists( '\Splits\Nav' ) ) {
 	require_once 'functions/nav.php';
 }
 add_action( 'wp', function() {
-	$nav = new \AlxMedia\Nav();
+	$nav = new \Splits\Nav();
 	$nav->enqueue(
 		[
 			'script' => 'js/nav.js',
