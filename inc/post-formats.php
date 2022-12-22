@@ -18,7 +18,7 @@
 <?php if ( has_post_format( 'gallery' ) ): // Gallery ?>
 	
 	<div class="post-format">
-		<?php $images = split_post_images(); if ( !empty($images) ): ?>
+		<?php $images = splits_post_images(); if ( !empty($images) ): ?>
 		<script type="text/javascript">
 			// Check if first slider image is loaded, and load flexslider on document ready
 			jQuery(document).ready(function(){
@@ -67,7 +67,7 @@
 
 	<div class="post-format">
 			<?php if ( has_post_thumbnail() ) {	
-				the_post_thumbnail('split-large'); 
+				the_post_thumbnail('splits-large'); 
 				$caption = get_post(get_post_thumbnail_id())->post_excerpt;
 				if ( isset($caption) && $caption ) echo '<div class="image-caption">'.$caption.'</div>';
 			} ?>

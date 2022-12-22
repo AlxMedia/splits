@@ -1,21 +1,21 @@
 <?php get_header(); ?>
 
-	<div id="split-left">
+	<div id="splits-left">
 		<?php get_template_part('inc/featured'); ?>
-	</div><!--/#split-left-->
+	</div><!--/#splits-left-->
 	
-	<div id="split-right">
+	<div id="splits-right">
 		
-		<div id="split-right-top" class="pad">
+		<div id="splits-right-top" class="pad">
 			<?php get_template_part('inc/page-title'); ?>	
 		</div>
 		
 		<div class="content pad">
 			
 			<div class="notebox">
-				<?php esc_html_e('For the term','split'); ?> "<span><?php echo get_search_query(); ?></span>".
+				<?php esc_html_e('For the term','splits'); ?> "<span><?php echo get_search_query(); ?></span>".
 				<?php if ( !have_posts() ): ?>
-					<?php esc_html_e('Please try another search:','split'); ?>
+					<?php esc_html_e('Please try another search:','splits'); ?>
 				<?php endif; ?>
 				<div class="search-again">
 					<?php get_search_form(); ?>
@@ -52,7 +52,7 @@
 			
 		</div><!--/.content-->
 
-	</div><!--/#split-right-->
+	</div><!--/#splits-right-->
 	
 <?php get_sidebar(); ?>
 	

@@ -1,9 +1,9 @@
 <?php get_header(); ?>
 
-	<div id="split-left">
+	<div id="splits-left">
 		
-		<div id="split-left-top" class="page-title alt group pad">
-			<h2><?php esc_html_e('Most Recent.','split'); ?> <span><?php esc_html_e('In','split'); ?> <?php echo single_cat_title('', false); ?>.</span></h2>
+		<div id="splits-left-top" class="page-title alt group pad">
+			<h2><?php esc_html_e('Most Recent.','splits'); ?> <span><?php esc_html_e('In','splits'); ?> <?php echo single_cat_title('', false); ?>.</span></h2>
 		</div>
 		<div class="clear"></div>
 		
@@ -23,11 +23,11 @@
 			wp_reset_postdata();
 		?>
 		
-	</div><!--/#split-left-->
+	</div><!--/#splits-left-->
 	
-	<div id="split-right">
+	<div id="splits-right">
 		
-		<div id="split-right-top" class="pad">
+		<div id="splits-right-top" class="pad">
 			<?php get_template_part('inc/page-title'); ?>	
 		</div>
 		
@@ -100,7 +100,7 @@
 
 		</div><!--/.content-->
 
-	</div><!--/#split-right-->
+	</div><!--/#splits-right-->
 	
 <?php get_sidebar(); ?>
 	

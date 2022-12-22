@@ -1,12 +1,12 @@
 <?php get_header(); ?>
 
-	<div id="split-left">
+	<div id="splits-left">
 		<?php get_template_part('inc/featured'); ?>
-	</div><!--/#split-left-->
+	</div><!--/#splits-left-->
 	
-	<div id="split-right">
+	<div id="splits-right">
 		
-		<div id="split-right-top" class="pad">
+		<div id="splits-right-top" class="pad">
 			<?php get_template_part('inc/page-title'); ?>	
 		</div>
 		
@@ -45,7 +45,7 @@
 			
 		</div><!--/.content-->
 
-	</div><!--/#split-right-->
+	</div><!--/#splits-right-->
 	
 <?php get_sidebar(); ?>
 	

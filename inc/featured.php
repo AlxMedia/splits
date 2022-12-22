@@ -14,10 +14,10 @@ $featured = new WP_Query(
 
 <?php if ( ( get_theme_mod('featured-posts-count','3') !='0') && $featured->have_posts() ): ?>
 	
-	<div id="split-left-top" class="page-title alt group pad">
-		<h2><?php esc_html_e('Featured Today.','split'); ?></h2>
+	<div id="splits-left-top" class="page-title alt group pad">
+		<h2><?php esc_html_e('Featured Today.','splits'); ?></h2>
 		<?php if ( get_theme_mod( 'header-social', 'on' ) == 'on' ): ?>
-			<?php split_social_links() ; ?>
+			<?php splits_social_links() ; ?>
 		<?php endif; ?>
 	</div>
 	<div class="clear"></div>

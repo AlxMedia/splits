@@ -4,7 +4,7 @@
 	<div class="featured-thumb">
 		<a href="<?php the_permalink(); ?>">
 			<?php if ( has_post_thumbnail() ): ?>
-				<?php the_post_thumbnail('split-large'); ?>
+				<?php the_post_thumbnail('splits-large'); ?>
 			<?php elseif ( get_theme_mod('placeholder','on') == 'on' ): ?>
 				<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/thumb-medium.png" alt="<?php the_title_attribute(); ?>" />
 			<?php endif; ?>	

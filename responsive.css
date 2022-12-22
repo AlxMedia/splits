@@ -21,31 +21,31 @@
 /* ------------------------------------------------------------------------- */
 @media only screen and (min-width: 1024px) and (max-width: 1280px) {
 	
-	#split:before { right: 55%; }
-	#split-left { width: 45%; } 
-	#split-right { width: 55%; }
-	#split-sidebar { width: 55%; }
+	#splits:before { right: 55%; }
+	#splits-left { width: 45%; } 
+	#splits-right { width: 55%; }
+	#splits-sidebar { width: 55%; }
 	
 }
 @media only screen and (max-width: 1023px) {
 	
-	#split:before,
-	.col-1c #split:before { display: none; }
-	#split-left,
-	#split-right,
-	.col-1c #split-left,
-	.col-1c #split-right { width: 100%; }
-	#split-sidebar { width: 60%; margin: 0 auto; float: none; }
+	#splits:before,
+	.col-1c #splits:before { display: none; }
+	#splits-left,
+	#splits-right,
+	.col-1c #splits-left,
+	.col-1c #splits-right { width: 100%; }
+	#splits-sidebar { width: 60%; margin: 0 auto; float: none; }
 	
-	#split-left { background: #181818; }
+	#splits-left { background: #181818; }
 	.stickyfill { position: relative; }
 	.admin-bar .stickyfill { top: 0; }
 	
-	.home.paged #split-left,
-	.search #split-left,
-	.archive #split-left,
-	.error404 #split-left { display: none; }
-	.archive.category #split-left { display: block; }
+	.home.paged #splits-left,
+	.search #splits-left,
+	.archive #splits-left,
+	.error404 #splits-left { display: none; }
+	.archive.category #splits-left { display: block; }
 }
 
 
@@ -54,9 +54,9 @@
 /* ------------------------------------------------------------------------- */
 @media only screen and (max-width: 719px) {
 	
-	#split-left-top,
-	#split-right-top { padding-top: 20px; padding-bottom: 20px; }
-	#split-sidebar { width: 100%; }
+	#splits-left-top,
+	#splits-right-top { padding-top: 20px; padding-bottom: 20px; }
+	#splits-sidebar { width: 100%; }
 	
 	/* layout */
 	.container { padding: 0; }
@@ -160,7 +160,7 @@
 	.sidebar { width: 100%; display: block; float: none; }
 	
 	/* hide */
-	#split-left-top .social-links,
+	#splits-left-top .social-links,
 	.mobile-sidebar-hide .sidebar { display: none; }
 	
 	/* base */

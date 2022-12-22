@@ -14,17 +14,11 @@
 // Load Kirki
 include( get_template_directory() . '/functions/kirki/kirki.php' );
 
-// Load theme updater functions
-function split_theme_updater() {
-	require( get_template_directory() . '/functions/updater/theme-updater.php' );
-}
-add_action( 'after_setup_theme', 'split_theme_updater' );
-
-if ( ! function_exists( 'split_load' ) ) {
+if ( ! function_exists( 'splits_load' ) ) {
 	
-	function split_load() {
+	function splits_load() {
 		// Load theme languages
-		load_theme_textdomain( 'split', get_template_directory().'/languages' );
+		load_theme_textdomain( 'splits', get_template_directory().'/languages' );
 		
 		// Load theme options and meta boxes
 		include( get_template_directory() . '/functions/theme-options.php' );
@@ -38,7 +32,7 @@ if ( ! function_exists( 'split_load' ) ) {
 	}
 	
 }
-add_action( 'after_setup_theme', 'split_load' );	
+add_action( 'after_setup_theme', 'splits_load' );	
 
 
 /* ------------------------------------------------------------------------- *
@@ -51,9 +45,9 @@ add_action( 'after_setup_theme', 'split_load' );
 
 /*  Theme setup
 /* ------------------------------------ */
-if ( ! function_exists( 'split_setup' ) ) {
+if ( ! function_exists( 'splits_setup' ) ) {
 	
-	function split_setup() {		
+	function splits_setup() {		
 		// Enable title tag
 		add_theme_support( 'title-tag' );
 		
@@ -76,10 +70,10 @@ if ( ! function_exists( 'split_setup' ) ) {
 		remove_theme_support( 'widgets-block-editor' );
 		
 		// Thumbnail sizes
-		add_image_size( 'split-small', 160, 160, true );
-		add_image_size( 'split-medium', 520, 293, true );
-		add_image_size( 'split-large', 720, 405, true );
-		add_image_size( 'split-square', 320, 320, true );
+		add_image_size( 'splits-small', 160, 160, true );
+		add_image_size( 'splits-medium', 520, 293, true );
+		add_image_size( 'splits-large', 720, 405, true );
+		add_image_size( 'splits-square', 320, 320, true );
 		
 		// Thumbnail sizes custom widgets
 		add_image_size( 'alx-small', 160, 160, true );
@@ -87,15 +81,15 @@ if ( ! function_exists( 'split_setup' ) ) {
 		
 		// Custom menu areas
 		register_nav_menus( array(
-			'mobile' 	=> esc_html__( 'Mobile', 'split' ),
-			'topbar' 	=> esc_html__( 'Topbar', 'split' ),
-			'header' 	=> esc_html__( 'Header', 'split' ),
-			'footer' 	=> esc_html__( 'Footer', 'split' ),
+			'mobile' 	=> esc_html__( 'Mobile', 'splits' ),
+			'topbar' 	=> esc_html__( 'Topbar', 'splits' ),
+			'header' 	=> esc_html__( 'Header', 'splits' ),
+			'footer' 	=> esc_html__( 'Footer', 'splits' ),
 		) );
 	}
 	
 }
-add_action( 'after_setup_theme', 'split_setup' );
+add_action( 'after_setup_theme', 'splits_setup' );
 
 
 /*  Custom navigation
@@ -117,9 +111,9 @@ add_action( 'wp', function() {
 
 /*  Custom logo
 /* ------------------------------------ */
-if ( ! function_exists( 'split_custom_logo' ) ) {
+if ( ! function_exists( 'splits_custom_logo' ) ) {
 	
-	function split_custom_logo() {
+	function splits_custom_logo() {
 		$defaults = array(
 			'height'		=> 120,
 			'width'			=> 400,
@@ -131,14 +125,14 @@ if ( ! function_exists( 'split_custom_logo' ) ) {
 	}
 
 }	
-add_action( 'after_setup_theme', 'split_custom_logo' );
+add_action( 'after_setup_theme', 'splits_custom_logo' );
 
 
 /*  Custom header
 /* ------------------------------------ */
-if ( ! function_exists( 'split_custom_header' ) ) {
+if ( ! function_exists( 'splits_custom_header' ) ) {
 	
-	function split_custom_header() {
+	function splits_custom_header() {
 		$args = array(
 			'default-image'	=> false,
 			'default-text'	=> false,
@@ -151,89 +145,89 @@ if ( ! function_exists( 'split_custom_header' ) ) {
 	}
 	
 }
-add_action( 'after_setup_theme', 'split_custom_header' );
+add_action( 'after_setup_theme', 'splits_custom_header' );
 
 
 /*  Custom background
 /* ------------------------------------ */
-if ( ! function_exists( 'split_custom_background' ) ) {
+if ( ! function_exists( 'splits_custom_background' ) ) {
 	
-	function split_custom_background() {
+	function splits_custom_background() {
 		$args = array();
 		add_theme_support( 'custom-background', $args );
 	}
 	
 }
-add_action( 'after_setup_theme', 'split_custom_background' );
+add_action( 'after_setup_theme', 'splits_custom_background' );
 
 
 /*  Deregister
 /* ------------------------------------ */
-if ( ! function_exists( 'split_deregister' ) ) {
+if ( ! function_exists( 'splits_deregister' ) ) {
 	
-	function split_deregister() {
+	function splits_deregister() {
 		wp_deregister_style( 'wp-pagenavi' );
 		wp_deregister_style( 'social-count-plus' );
 	}
 	
 }
-add_action( 'wp_enqueue_scripts', 'split_deregister', 100 );
+add_action( 'wp_enqueue_scripts', 'splits_deregister', 100 );
 
 
 /*  Register sidebars
 /* ------------------------------------ */	
-if ( ! function_exists( 'split_sidebars' ) ) {
+if ( ! function_exists( 'splits_sidebars' ) ) {
 
-	function split_sidebars()	{
-		register_sidebar(array( 'name' => esc_html__('Primary','split'),'id' => 'primary','description' => esc_html__("Normal full width sidebar","split"), 'before_widget' => '<div id="%1$s" class="widget %2$s">','after_widget' => '</div>','before_title' => '<h3 class="group"><span>','after_title' => '</span></h3>'));
+	function splits_sidebars()	{
+		register_sidebar(array( 'name' => esc_html__('Primary','splits'),'id' => 'primary','description' => esc_html__("Normal full width sidebar","splits"), 'before_widget' => '<div id="%1$s" class="widget %2$s">','after_widget' => '</div>','before_title' => '<h3 class="group"><span>','after_title' => '</span></h3>'));
 
-		if ( get_theme_mod('header-ads') == 'on' ) { register_sidebar(array( 'name' => esc_html__('Header Ads','split'),'id' => 'header-ads', 'description' => esc_html("Header ads area","split"), 'before_widget' => '<div id="%1$s" class="widget %2$s">','after_widget' => '</div>','before_title' => '<h3 class="group"><span>','after_title' => '</span></h3>')); }
-		if ( get_theme_mod('footer-ads') == 'on' ) { register_sidebar(array( 'name' => esc_html__('Footer Ads',"split"),'id' => 'footer-ads', 'description' => esc_html__("Footer ads area","split"), 'before_widget' => '<div id="%1$s" class="widget %2$s">','after_widget' => '</div>','before_title' => '<h3 class="group"><span>','after_title' => '</span></h3>')); }
+		if ( get_theme_mod('header-ads') == 'on' ) { register_sidebar(array( 'name' => esc_html__('Header Ads','splits'),'id' => 'header-ads', 'description' => esc_html("Header ads area","splits"), 'before_widget' => '<div id="%1$s" class="widget %2$s">','after_widget' => '</div>','before_title' => '<h3 class="group"><span>','after_title' => '</span></h3>')); }
+		if ( get_theme_mod('footer-ads') == 'on' ) { register_sidebar(array( 'name' => esc_html__('Footer Ads',"splits"),'id' => 'footer-ads', 'description' => esc_html__("Footer ads area","splits"), 'before_widget' => '<div id="%1$s" class="widget %2$s">','after_widget' => '</div>','before_title' => '<h3 class="group"><span>','after_title' => '</span></h3>')); }
 		
-		if ( get_theme_mod('frontpage-widgets-top') == 'on' ) { register_sidebar(array( 'name' => esc_html__('Frontpage Top 1','split'),'id' => 'frontpage-top-1', 'description' => esc_html__("Frontpage area","split"), 'before_widget' => '<div id="%1$s" class="widget %2$s">','after_widget' => '</div>','before_title' => '<h3 class="group"><span>','after_title' => '</span></h3>')); }
-		if ( get_theme_mod('frontpage-widgets-top') == 'on' ) { register_sidebar(array( 'name' => esc_html__('Frontpage Top 2','split'),'id' => 'frontpage-top-2', 'description' => esc_html__("Frontpage area","split"), 'before_widget' => '<div id="%1$s" class="widget %2$s">','after_widget' => '</div>','before_title' => '<h3 class="group"><span>','after_title' => '</span></h3>')); }
-		if ( get_theme_mod('frontpage-widgets-bottom') == 'on' ) { register_sidebar(array( 'name' => esc_html__('Frontpage Bottom 1','split'),'id' => 'frontpage-bottom-1', 'description' => esc_html__("Frontpage area","split"), 'before_widget' => '<div id="%1$s" class="widget %2$s">','after_widget' => '</div>','before_title' => '<h3 class="group"><span>','after_title' => '</span></h3>')); }
-		if ( get_theme_mod('frontpage-widgets-bottom') == 'on' ) { register_sidebar(array( 'name' => esc_html__('Frontpage Bottom 2','split'),'id' => 'frontpage-bottom-2', 'description' => esc_html__("Frontpage area","split"), 'before_widget' => '<div id="%1$s" class="widget %2$s">','after_widget' => '</div>','before_title' => '<h3 class="group"><span>','after_title' => '</span></h3>')); }
+		if ( get_theme_mod('frontpage-widgets-top') == 'on' ) { register_sidebar(array( 'name' => esc_html__('Frontpage Top 1','splits'),'id' => 'frontpage-top-1', 'description' => esc_html__("Frontpage area","splits"), 'before_widget' => '<div id="%1$s" class="widget %2$s">','after_widget' => '</div>','before_title' => '<h3 class="group"><span>','after_title' => '</span></h3>')); }
+		if ( get_theme_mod('frontpage-widgets-top') == 'on' ) { register_sidebar(array( 'name' => esc_html__('Frontpage Top 2','splits'),'id' => 'frontpage-top-2', 'description' => esc_html__("Frontpage area","splits"), 'before_widget' => '<div id="%1$s" class="widget %2$s">','after_widget' => '</div>','before_title' => '<h3 class="group"><span>','after_title' => '</span></h3>')); }
+		if ( get_theme_mod('frontpage-widgets-bottom') == 'on' ) { register_sidebar(array( 'name' => esc_html__('Frontpage Bottom 1','splits'),'id' => 'frontpage-bottom-1', 'description' => esc_html__("Frontpage area","splits"), 'before_widget' => '<div id="%1$s" class="widget %2$s">','after_widget' => '</div>','before_title' => '<h3 class="group"><span>','after_title' => '</span></h3>')); }
+		if ( get_theme_mod('frontpage-widgets-bottom') == 'on' ) { register_sidebar(array( 'name' => esc_html__('Frontpage Bottom 2','splits'),'id' => 'frontpage-bottom-2', 'description' => esc_html__("Frontpage area","splits"), 'before_widget' => '<div id="%1$s" class="widget %2$s">','after_widget' => '</div>','before_title' => '<h3 class="group"><span>','after_title' => '</span></h3>')); }
 
-		if ( get_theme_mod('footer-widgets') >= '1' ) { register_sidebar(array( 'name' => esc_html__('Footer 1','split'),'id' => 'footer-1', 'description' => esc_html__("Widgetized footer","split"), 'before_widget' => '<div id="%1$s" class="widget %2$s">','after_widget' => '</div>','before_title' => '<h3 class="group"><span>','after_title' => '</span></h3>')); }
-		if ( get_theme_mod('footer-widgets') >= '2' ) { register_sidebar(array( 'name' => esc_html__('Footer 2','split'),'id' => 'footer-2', 'description' => esc_html__("Widgetized footer","split"), 'before_widget' => '<div id="%1$s" class="widget %2$s">','after_widget' => '</div>','before_title' => '<h3 class="group"><span>','after_title' => '</span></h3>')); }
-		if ( get_theme_mod('footer-widgets') >= '3' ) { register_sidebar(array( 'name' => esc_html__('Footer 3','split'),'id' => 'footer-3', 'description' => esc_html__("Widgetized footer","split"), 'before_widget' => '<div id="%1$s" class="widget %2$s">','after_widget' => '</div>','before_title' => '<h3 class="group"><span>','after_title' => '</span></h3>')); }
-		if ( get_theme_mod('footer-widgets') >= '4' ) { register_sidebar(array( 'name' => esc_html__('Footer 4','split'),'id' => 'footer-4', 'description' => esc_html__("Widgetized footer","split"), 'before_widget' => '<div id="%1$s" class="widget %2$s">','after_widget' => '</div>','before_title' => '<h3 class="group"><span>','after_title' => '</span></h3>')); }
+		if ( get_theme_mod('footer-widgets') >= '1' ) { register_sidebar(array( 'name' => esc_html__('Footer 1','splits'),'id' => 'footer-1', 'description' => esc_html__("Widgetized footer","splits"), 'before_widget' => '<div id="%1$s" class="widget %2$s">','after_widget' => '</div>','before_title' => '<h3 class="group"><span>','after_title' => '</span></h3>')); }
+		if ( get_theme_mod('footer-widgets') >= '2' ) { register_sidebar(array( 'name' => esc_html__('Footer 2','splits'),'id' => 'footer-2', 'description' => esc_html__("Widgetized footer","splits"), 'before_widget' => '<div id="%1$s" class="widget %2$s">','after_widget' => '</div>','before_title' => '<h3 class="group"><span>','after_title' => '</span></h3>')); }
+		if ( get_theme_mod('footer-widgets') >= '3' ) { register_sidebar(array( 'name' => esc_html__('Footer 3','splits'),'id' => 'footer-3', 'description' => esc_html__("Widgetized footer","splits"), 'before_widget' => '<div id="%1$s" class="widget %2$s">','after_widget' => '</div>','before_title' => '<h3 class="group"><span>','after_title' => '</span></h3>')); }
+		if ( get_theme_mod('footer-widgets') >= '4' ) { register_sidebar(array( 'name' => esc_html__('Footer 4','splits'),'id' => 'footer-4', 'description' => esc_html__("Widgetized footer","splits"), 'before_widget' => '<div id="%1$s" class="widget %2$s">','after_widget' => '</div>','before_title' => '<h3 class="group"><span>','after_title' => '</span></h3>')); }
 	}
 	
 }
-add_action( 'widgets_init', 'split_sidebars' );
+add_action( 'widgets_init', 'splits_sidebars' );
 
 
 /*  Enqueue javascript
 /* ------------------------------------ */	
-if ( ! function_exists( 'split_scripts' ) ) {
+if ( ! function_exists( 'splits_scripts' ) ) {
 	
-	function split_scripts() {
-		wp_enqueue_script( 'split-flexslider', get_template_directory_uri() . '/js/jquery.flexslider.min.js', array( 'jquery' ),'', false );
-		wp_enqueue_script( 'split-fitvids', get_template_directory_uri() . '/js/jquery.fitvids.js', array( 'jquery' ),'', true );
-		wp_enqueue_script( 'split-stickyfill', get_template_directory_uri() . '/js/stickyfill.min.js', array( 'jquery' ),'', true );
-		wp_enqueue_script( 'split-owl-carousel', get_template_directory_uri() . '/js/owl.carousel.min.js', array( 'jquery' ),'', true );
-		wp_enqueue_script( 'split-scripts', get_template_directory_uri() . '/js/scripts.js', array( 'jquery' ),'', true );
+	function splits_scripts() {
+		wp_enqueue_script( 'splits-flexslider', get_template_directory_uri() . '/js/jquery.flexslider.min.js', array( 'jquery' ),'', false );
+		wp_enqueue_script( 'splits-fitvids', get_template_directory_uri() . '/js/jquery.fitvids.js', array( 'jquery' ),'', true );
+		wp_enqueue_script( 'splits-stickyfill', get_template_directory_uri() . '/js/stickyfill.min.js', array( 'jquery' ),'', true );
+		wp_enqueue_script( 'splits-owl-carousel', get_template_directory_uri() . '/js/owl.carousel.min.js', array( 'jquery' ),'', true );
+		wp_enqueue_script( 'splits-scripts', get_template_directory_uri() . '/js/scripts.js', array( 'jquery' ),'', true );
 		if ( is_singular() && get_option( 'thread_comments' ) )	{ wp_enqueue_script( 'comment-reply' ); }
 	}  
 	
 }
-add_action( 'wp_enqueue_scripts', 'split_scripts' ); 
+add_action( 'wp_enqueue_scripts', 'splits_scripts' ); 
 
 
 /*  Enqueue css
 /* ------------------------------------ */	
-if ( ! function_exists( 'split_styles' ) ) {
+if ( ! function_exists( 'splits_styles' ) ) {
 	
-	function split_styles() {
-		wp_enqueue_style( 'split-style', get_stylesheet_uri() );
-		wp_enqueue_style( 'split-responsive', get_template_directory_uri().'/responsive.css' );
-		wp_enqueue_style( 'split-font-awesome', get_template_directory_uri().'/fonts/all.min.css' );
+	function splits_styles() {
+		wp_enqueue_style( 'splits-style', get_stylesheet_uri() );
+		wp_enqueue_style( 'splits-responsive', get_template_directory_uri().'/responsive.css' );
+		wp_enqueue_style( 'splits-font-awesome', get_template_directory_uri().'/fonts/all.min.css' );
 	}
 	
 }
-add_action( 'wp_enqueue_scripts', 'split_styles' );
+add_action( 'wp_enqueue_scripts', 'splits_styles' );
 
 
 /* ------------------------------------------------------------------------- *
@@ -242,9 +236,9 @@ add_action( 'wp_enqueue_scripts', 'split_styles' );
 
 /*  Layout class
 /* ------------------------------------ */
-if ( ! function_exists( 'split_layout_class' ) ) {
+if ( ! function_exists( 'splits_layout_class' ) ) {
 	
-	function split_layout_class() {
+	function splits_layout_class() {
 		// Default layout
 		$layout = 'col-2cl';
 		$default = 'col-2cl';
@@ -284,9 +278,9 @@ if ( ! function_exists( 'split_layout_class' ) ) {
 
 /*  Dynamic sidebar primary
 /* ------------------------------------ */
-if ( ! function_exists( 'split_sidebar_primary' ) ) {
+if ( ! function_exists( 'splits_sidebar_primary' ) ) {
 	
-	function split_sidebar_primary() {
+	function splits_sidebar_primary() {
 		// Default sidebar
 		$sidebar = 'primary';
 
@@ -318,9 +312,9 @@ if ( ! function_exists( 'split_sidebar_primary' ) ) {
 
 /*  Dynamic sidebar secondary
 /* ------------------------------------ */
-if ( ! function_exists( 'split_sidebar_secondary' ) ) {
+if ( ! function_exists( 'splits_sidebar_secondary' ) ) {
 
-	function split_sidebar_secondary() {
+	function splits_sidebar_secondary() {
 		// Default sidebar
 		$sidebar = 'secondary';
 
@@ -352,9 +346,9 @@ if ( ! function_exists( 'split_sidebar_secondary' ) ) {
 
 /*  Social links
 /* ------------------------------------ */
-if ( ! function_exists( 'split_social_links' ) ) {
+if ( ! function_exists( 'splits_social_links' ) ) {
 
-	function split_social_links() {
+	function splits_social_links() {
 		if ( !get_theme_mod('social-links') =='' ) {
 			$links = get_theme_mod('social-links', array());
 			if ( !empty( $links ) ) {
@@ -388,9 +382,9 @@ if ( ! function_exists( 'split_social_links' ) ) {
 
 /*  Site name/logo
 /* ------------------------------------ */
-if ( ! function_exists( 'split_site_title' ) ) {
+if ( ! function_exists( 'splits_site_title' ) ) {
 
-	function split_site_title() {
+	function splits_site_title() {
 		
 		$custom_logo_id = get_theme_mod( 'custom_logo' );
 		$logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
@@ -418,9 +412,9 @@ if ( ! function_exists( 'split_site_title' ) ) {
 
 /*  Blog title
 /* ------------------------------------ */
-if ( ! function_exists( 'split_blog_title' ) ) {
+if ( ! function_exists( 'splits_blog_title' ) ) {
 
-	function split_blog_title() {
+	function splits_blog_title() {
 		global $post;
 		$heading = esc_html( get_theme_mod('blog-heading') );
 		$subheading = esc_html( get_theme_mod('blog-subheading') );
@@ -441,9 +435,9 @@ if ( ! function_exists( 'split_blog_title' ) ) {
 
 /*  Related posts
 /* ------------------------------------ */
-if ( ! function_exists( 'split_related_posts' ) ) {
+if ( ! function_exists( 'splits_related_posts' ) ) {
 
-	function split_related_posts() {
+	function splits_related_posts() {
 		wp_reset_postdata();
 		global $post;
 
@@ -492,9 +486,9 @@ if ( ! function_exists( 'split_related_posts' ) ) {
 
 /*  Get images attached to post
 /* ------------------------------------ */
-if ( ! function_exists( 'split_post_images' ) ) {
+if ( ! function_exists( 'splits_post_images' ) ) {
 
-	function split_post_images( $args=array() ) {
+	function splits_post_images( $args=array() ) {
 		global $post;
 
 		$defaults = array(
@@ -516,9 +510,9 @@ if ( ! function_exists( 'split_post_images' ) ) {
 
 /*  Get featured post ids
 /* ------------------------------------ */
-if ( ! function_exists( 'split_get_featured_post_ids' ) ) {
+if ( ! function_exists( 'splits_get_featured_post_ids' ) ) {
 
-	function split_get_featured_post_ids() {
+	function splits_get_featured_post_ids() {
 		$args = array(
 			'category'		=> absint( get_theme_mod('featured-category','') ),
 			'numberposts'	=> absint( get_theme_mod('featured-posts-count','3') ),
@@ -539,10 +533,10 @@ if ( ! function_exists( 'split_get_featured_post_ids' ) ) {
 
 /*  Body class
 /* ------------------------------------ */
-if ( ! function_exists( 'split_body_class' ) ) {
+if ( ! function_exists( 'splits_body_class' ) ) {
 
-	function split_body_class( $classes ) {
-		$classes[] = split_layout_class();
+	function splits_body_class( $classes ) {
+		$classes[] = splits_layout_class();
 		if ( get_theme_mod( 'boxed','off' ) != 'on' ) { $classes[] = 'full-width'; }
 		if ( get_theme_mod( 'boxed','off' ) == 'on' ) { $classes[] = 'boxed'; }
 		if ( has_nav_menu( 'topbar' ) ) { $classes[] = 'topbar-enabled'; }
@@ -553,14 +547,14 @@ if ( ! function_exists( 'split_body_class' ) ) {
 	}
 	
 }
-add_filter( 'body_class', 'split_body_class' );
+add_filter( 'body_class', 'splits_body_class' );
 
 
 /*  Excerpt ending
 /* ------------------------------------ */
-if ( ! function_exists( 'split_excerpt_more' ) ) {
+if ( ! function_exists( 'splits_excerpt_more' ) ) {
 
-	function split_excerpt_more( $more ) {
+	function splits_excerpt_more( $more ) {
 		if ( is_admin() ) {
 			return $more;
 		}
@@ -568,14 +562,14 @@ if ( ! function_exists( 'split_excerpt_more' ) ) {
 	}
 	
 }
-add_filter( 'excerpt_more', 'split_excerpt_more' );
+add_filter( 'excerpt_more', 'splits_excerpt_more' );
 
 
 /*  Excerpt length
 /* ------------------------------------ */
-if ( ! function_exists( 'split_excerpt_length' ) ) {
+if ( ! function_exists( 'splits_excerpt_length' ) ) {
 
-	function split_excerpt_length( $length ) {
+	function splits_excerpt_length( $length ) {
 		if ( is_admin() ) {
 			return $length;
 		}
@@ -589,14 +583,14 @@ if ( ! function_exists( 'split_excerpt_length' ) ) {
 	}
 	
 }
-add_filter( 'excerpt_length', 'split_excerpt_length', 999 );
+add_filter( 'excerpt_length', 'splits_excerpt_length', 999 );
 
 
 /*  Add responsive container to embeds
 /* ------------------------------------ */	
-if ( ! function_exists( 'split_embed_html' ) ) {
+if ( ! function_exists( 'splits_embed_html' ) ) {
 
-	function split_embed_html( $html, $url ) {
+	function splits_embed_html( $html, $url ) {
 		
 		$pattern    = '/^https?:\/\/(www\.)?twitter\.com/';
 		$is_twitter = preg_match( $pattern, $url );
@@ -609,19 +603,19 @@ if ( ! function_exists( 'split_embed_html' ) ) {
 	}
 
 }
-add_filter( 'embed_oembed_html', 'split_embed_html', 10, 3 );
+add_filter( 'embed_oembed_html', 'splits_embed_html', 10, 3 );
 
 
 /*  Add responsive container to jetpack embeds
 /* ------------------------------------ */	
-if ( ! function_exists( 'split_embed_html_jp' ) ) {
+if ( ! function_exists( 'splits_embed_html_jp' ) ) {
 
-	function split_embed_html_jp( $html ) {
+	function splits_embed_html_jp( $html ) {
 		return '<div class="video-container">' . $html . '</div>';
 	}
 
 }
-add_filter( 'video_embed_html', 'split_embed_html_jp' );
+add_filter( 'video_embed_html', 'splits_embed_html_jp' );
 
 
 /* ------------------------------------------------------------------------- *
@@ -630,9 +624,9 @@ add_filter( 'video_embed_html', 'split_embed_html_jp' );
 
 /*  Include or exclude featured articles in loop
 /* ------------------------------------ */
-if ( ! function_exists( 'split_pre_get_posts' ) ) {
+if ( ! function_exists( 'splits_pre_get_posts' ) ) {
 
-	function split_pre_get_posts( $query ) {
+	function splits_pre_get_posts( $query ) {
 		// Are we on main query ?
 		if ( !$query->is_main_query() ) return;
 		if ( $query->is_home() ) {
@@ -640,7 +634,7 @@ if ( ! function_exists( 'split_pre_get_posts' ) ) {
 			// Featured posts enabled
 			if ( get_theme_mod('featured-posts-count','3') != '0' ) {
 				// Get featured post ids
-				$featured_post_ids = split_get_featured_post_ids();
+				$featured_post_ids = splits_get_featured_post_ids();
 				// Exclude posts
 				if ( $featured_post_ids && !get_theme_mod('featured-posts-include') )
 					$query->set('post__not_in', $featured_post_ids);
@@ -649,26 +643,26 @@ if ( ! function_exists( 'split_pre_get_posts' ) ) {
 	}
 	
 }
-add_action( 'pre_get_posts', 'split_pre_get_posts' );
+add_action( 'pre_get_posts', 'splits_pre_get_posts' );
 
 
 /*  Script for no-js / js class
 /* ------------------------------------ */
-if ( ! function_exists( 'split_html_js_class' ) ) {
+if ( ! function_exists( 'splits_html_js_class' ) ) {
 
-	function split_html_js_class () {
+	function splits_html_js_class () {
 		echo '<script>document.documentElement.className = document.documentElement.className.replace("no-js","js");</script>'. "\n";
 	}
 	
 }
-add_action( 'wp_head', 'split_html_js_class', 1 );
+add_action( 'wp_head', 'splits_html_js_class', 1 );
 
 
 /*  Admin panel css
 /* ------------------------------------ */
-if ( ! function_exists( 'split_admin_panel_css' ) ) {
+if ( ! function_exists( 'splits_admin_panel_css' ) ) {
 	
-	function split_admin_panel_css() {
+	function splits_admin_panel_css() {
 		global $pagenow;
 		if ( 'post.php' === $pagenow || 'post-new.php' === $pagenow ) {
 			echo '<style>
@@ -679,31 +673,31 @@ if ( ! function_exists( 'split_admin_panel_css' ) ) {
 	}
 
 }
-add_action( 'admin_head', 'split_admin_panel_css' );
+add_action( 'admin_head', 'splits_admin_panel_css' );
 
 
 /*  TGM plugin activation
 /* ------------------------------------ */
-if ( ! function_exists( 'split_plugins' ) ) {
+if ( ! function_exists( 'splits_plugins' ) ) {
 	
-	function split_plugins() {
+	function splits_plugins() {
 		if ( get_theme_mod('recommended-plugins','on') =='on' ) { 	
 			// Add the following plugins
 			$plugins = array(
 				array(
-					'name' => esc_html__( 'Alx Extensions', 'split' ),
+					'name' => esc_html__( 'Alx Extensions', 'splits' ),
 					'slug' => 'alx-extensions',
 				),
 				array(
-					'name' => esc_html__( 'Meta Box', 'split' ),
+					'name' => esc_html__( 'Meta Box', 'splits' ),
 					'slug' => 'meta-box',
 				),
 				array(
-					'name' => esc_html__( 'Regenerate Thumbnails', 'split' ),
+					'name' => esc_html__( 'Regenerate Thumbnails', 'splits' ),
 					'slug' => 'regenerate-thumbnails',
 				),
 				array(
-					'name' => esc_html__( 'WP-PageNavi', 'split' ),
+					'name' => esc_html__( 'WP-PageNavi', 'splits' ),
 					'slug' => 'wp-pagenavi',
 				)
 			);	
@@ -712,17 +706,17 @@ if ( ! function_exists( 'split_plugins' ) ) {
 	}
 	
 }
-add_action( 'tgmpa_register', 'split_plugins' );
+add_action( 'tgmpa_register', 'splits_plugins' );
 
 
 /*  WooCommerce basic support
 /* ------------------------------------ */
-function split_wc_wrapper_start() {
-	echo '<div id="split-left">';
+function splits_wc_wrapper_start() {
+	echo '<div id="splits-left">';
 	get_template_part('inc/featured');
-	echo '</div><!--/#split-left-->';
-	echo '<div id="split-right">';
-	echo '<div id="split-right-top" class="pad">';
+	echo '</div><!--/#splits-left-->';
+	echo '<div id="splits-right">';
+	echo '<div id="splits-right-top" class="pad">';
 	echo '<div class="page-title">';
 	echo '<h2>';
 	echo woocommerce_page_title();
@@ -731,23 +725,23 @@ function split_wc_wrapper_start() {
 	echo '</div>';
 	echo '<div class="content pad">';
 }
-function split_wc_wrapper_end() {
+function splits_wc_wrapper_end() {
 	echo '</div><!--/.content-->';
-	echo '</div><!--/#split-right-->';
+	echo '</div><!--/#splits-right-->';
 }
 remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10);
 remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10);
-add_action('woocommerce_before_main_content', 'split_wc_wrapper_start', 10);
-add_action('woocommerce_after_main_content', 'split_wc_wrapper_end', 10);
+add_action('woocommerce_before_main_content', 'splits_wc_wrapper_start', 10);
+add_action('woocommerce_after_main_content', 'splits_wc_wrapper_end', 10);
 
 
 /*  Accessibility IE11 fix - https://git.io/vWdr2
 /* ------------------------------------ */
-function split_skip_link_focus_fix() {
+function splits_skip_link_focus_fix() {
 	?>
 	<script>
 	/(trident|msie)/i.test(navigator.userAgent)&&document.getElementById&&window.addEventListener&&window.addEventListener("hashchange",function(){var t,e=location.hash.substring(1);/^[A-z0-9_-]+$/.test(e)&&(t=document.getElementById(e))&&(/^(?:a|select|input|button|textarea)$/i.test(t.tagName)||(t.tabIndex=-1),t.focus())},!1);
 	</script>
 	<?php
 }
-add_action( 'wp_print_footer_scripts', 'split_skip_link_focus_fix' );
+add_action( 'wp_print_footer_scripts', 'splits_skip_link_focus_fix' );

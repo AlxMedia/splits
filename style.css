@@ -1,15 +1,15 @@
 /*
-Theme Name: Split
-Theme URI: http://alx.media/themes/split/
+Theme Name: Splits
+Theme URI: http://alx.media/themes/splits/
 Version: 1.4.9
 Requires at least: 5.0
 Requires PHP: 5.6
 Tested up to: 6.0
-Description: <a href="http://alx.media/themes/split/">Split</a> is a responsive 100% high resolution theme for blogs and magazines. The feature list is long: Unlimited accent colors, unlimited widget areas, sidebar to the right that can be uniquely specified for each page or post, 0-4 footer widget columns, almost zero layout images, related posts and post nav, featured stories and carousel, 5 post formats, good SEO, 2 flexible custom widgets, localisation support, social links, logo upload and many more useful admin panel features.
+Description: <a href="http://alx.media/themes/splits/">Splits</a> is a responsive 100% high resolution theme for blogs and magazines. The feature list is long: Unlimited accent colors, unlimited widget areas, sidebar to the right that can be uniquely specified for each page or post, 0-4 footer widget columns, almost zero layout images, related posts and post nav, featured stories and carousel, 5 post formats, good SEO, 2 flexible custom widgets, localisation support, social links, logo upload and many more useful admin panel features.
 Author: Alexander Agnarson
 Author URI: http://alx.media
 Tags: blog, one-column, two-columns, three-columns, right-sidebar, left-sidebar, custom-colors, custom-menu, featured-images, flexible-header, full-width-template, post-formats, sticky-post, theme-options, threaded-comments, translation-ready, custom-logo, custom-header, custom-background
-Text Domain: split
+Text Domain: splits
 
 	Copyright: (c) 2018 Alexander "Alx" Agnarson
 	License: GNU General Public License v3.0
@@ -792,20 +792,20 @@ box-shadow: 0 0 2px rgba(255,255,255,0.4);
 
 
 /* ------------------------------------------------------------------------- *
- *  Section: Splits
+ *  Section: Splitss
 /* ------------------------------------------------------------------------- */
-#split { position: relative; }
-#split:before { background: #181818; display: block; content:""; position: absolute; top: 0; bottom: 0; left: -9999px; right: 65%; }
-.boxed #split:before { left: 0; }
-#split-left { width: 35%; float: left; } 
-#split-right { width: 45%; float: left; border-right: 1px solid #eee; }
-#split-sidebar { width: 20%; float: right; }
-#split-left-top { padding-bottom: 30px; border-bottom: 1px solid #222; }
-#split-right-top { padding-bottom: 30px; border-bottom: 1px solid #eee; }
+#splits { position: relative; }
+#splits:before { background: #181818; display: block; content:""; position: absolute; top: 0; bottom: 0; left: -9999px; right: 65%; }
+.boxed #splits:before { left: 0; }
+#splits-left { width: 35%; float: left; } 
+#splits-right { width: 45%; float: left; border-right: 1px solid #eee; }
+#splits-sidebar { width: 20%; float: right; }
+#splits-left-top { padding-bottom: 30px; border-bottom: 1px solid #222; }
+#splits-right-top { padding-bottom: 30px; border-bottom: 1px solid #eee; }
 
-.col-1c #split:before { right: 50%; }
-.col-1c #split-left,
-.col-1c #split-right { width: 50%; }
+.col-1c #splits:before { right: 50%; }
+.col-1c #splits-left,
+.col-1c #splits-right { width: 50%; }
 
 .stickyfill { position: -webkit-sticky; position: sticky; top: 0; }
 .admin-bar .stickyfill { top: 32px; }
@@ -1728,4 +1728,4 @@ user-select: none;
 .screen-reader-text{ border: 0; clip: rect(1px, 1px, 1px, 1px); clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute!important; width: 1px; word-wrap: normal!important; }
 .screen-reader-text:focus { background-color: #fff; border-radius: 3px; box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.1); clip: auto!important; clip-path: none; color: #333; display: block; font-size: 14px; font-size: 0.875rem; font-weight: bold; height: auto; right: 5px; line-height: normal; padding: 15px 23px 14px; text-decoration: none; top: 5px; width: auto; z-index: 100000; }
 /* Do not show the outline on the skip link target. */
-#split[tabindex="-1"]:focus{ outline: 0; }
+#splits[tabindex="-1"]:focus{ outline: 0; }

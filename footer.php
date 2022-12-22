@@ -1,4 +1,4 @@
-	</div><!--/#split-->
+	</div><!--/#splits-->
 	
 	<footer id="footer">
 		
@@ -66,13 +66,13 @@
 							<?php if ( get_theme_mod( 'copyright' ) ): ?>
 								<p><?php echo esc_html( get_theme_mod( 'copyright' ) ); ?></p>
 							<?php else: ?>
-								<p><?php bloginfo(); ?> &copy; <?php echo esc_html( date_i18n( esc_html__( 'Y', 'split' ) ) ); ?>. <?php esc_html_e( 'All Rights Reserved.', 'split' ); ?></p>
+								<p><?php bloginfo(); ?> &copy; <?php echo esc_html( date_i18n( esc_html__( 'Y', 'splits' ) ) ); ?>. <?php esc_html_e( 'All Rights Reserved.', 'splits' ); ?></p>
 							<?php endif; ?>
 						</div><!--/#copyright-->
 						
 						<?php if ( get_theme_mod( 'credit', 'on' ) == 'on' ): ?>
 						<div id="credit">
-							<p><?php esc_html_e('Powered by','split'); ?> <a href="http://wordpress.org" rel="nofollow">WordPress</a>. <?php esc_html_e('Theme by','split'); ?> <a href="http://alx.media" rel="nofollow">Alx</a>.</p>
+							<p><?php esc_html_e('Powered by','splits'); ?> <a href="http://wordpress.org" rel="nofollow">WordPress</a>. <?php esc_html_e('Theme by','splits'); ?> <a href="http://alx.media" rel="nofollow">Alx</a>.</p>
 						</div><!--/#credit-->
 						<?php endif; ?>
 						
@@ -80,7 +80,7 @@
 					
 					<div class="grid one-half last">	
 						<?php if ( get_theme_mod( 'footer-social', 'on' ) == 'on' ): ?>
-							<?php split_social_links() ; ?>
+							<?php splits_social_links() ; ?>
 						<?php endif; ?>
 					</div>
 				

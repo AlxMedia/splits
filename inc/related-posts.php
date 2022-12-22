@@ -1,9 +1,9 @@
-<?php $related = split_related_posts(); ?>
+<?php $related = splits_related_posts(); ?>
 
 <?php if ( $related->have_posts() ): ?>
 
 <h4 class="heading">
-	<i class="fas fa-hand-point-right"></i><?php esc_html_e('You may also like...','split'); ?>
+	<i class="fas fa-hand-point-right"></i><?php esc_html_e('You may also like...','splits'); ?>
 </h4>
 
 <ul class="related-posts group">
@@ -15,7 +15,7 @@
 			<div class="post-thumbnail">
 				<a href="<?php the_permalink(); ?>">
 					<?php if ( has_post_thumbnail() ): ?>
-						<?php the_post_thumbnail('split-medium'); ?>
+						<?php the_post_thumbnail('splits-medium'); ?>
 					<?php elseif ( get_theme_mod('placeholder','on') == 'on' ): ?>
 						<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/thumb-medium.png" alt="<?php the_title_attribute(); ?>" />
 					<?php endif; ?>

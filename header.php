@@ -16,7 +16,7 @@
 
 <?php if ( function_exists( 'wp_body_open' ) ) { wp_body_open(); } ?>
 
-<a class="skip-link screen-reader-text" href="#split"><?php _e( 'Skip to content', 'split' ); ?></a>
+<a class="skip-link screen-reader-text" href="#splits"><?php _e( 'Skip to content', 'splits' ); ?></a>
 
 <div id="wrapper">
 
@@ -62,7 +62,7 @@
 		
 		<div class="container group">
 			<div class="group pad nav-menu-dropdown-left">
-				<?php echo split_site_title(); ?>
+				<?php echo splits_site_title(); ?>
 				<?php if ( display_header_text() == true ): ?>
 					<p class="site-description"><?php bloginfo( 'description' ); ?></p>
 				<?php endif; ?>
@@ -87,4 +87,4 @@
 
 	</header><!--/#header-->
 	
-	<div id="split" class="container group">
+	<div id="splits" class="container group">

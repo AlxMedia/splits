@@ -1,10 +1,10 @@
 <?php 
-	$sidebar = split_sidebar_primary();
-	$layout = split_layout_class();
+	$sidebar = splits_sidebar_primary();
+	$layout = splits_layout_class();
 	if ( $layout != 'col-1c'):
 ?>
 	
-<div id="split-sidebar">
+<div id="splits-sidebar">
 	
 	<div class="sidebar s1">
 		
@@ -24,6 +24,6 @@
 		
 	</div><!--/.sidebar-->
 
-</div><!--/#split-sidebar-->
+</div><!--/#splits-sidebar-->
 
 <?php endif; ?>

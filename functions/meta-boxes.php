@@ -1,5 +1,5 @@
 <?php
-function split_get_meta_box( $meta_boxes ) {
+function splits_get_meta_box( $meta_boxes ) {
 	
 	/* do not show */
 	$prefix = '_';
@@ -18,7 +18,7 @@ function split_get_meta_box( $meta_boxes ) {
 /* ------------------------------------ */	
 	$meta_boxes[] = array(
 		'id' => 'page-options',
-		'title' => esc_html__( 'Page Options', 'split' ),
+		'title' => esc_html__( 'Page Options', 'splits' ),
 		'post_types' => array( 'page' ),
 		'context' => 'advanced',
 		'priority' => 'high',
@@ -26,15 +26,15 @@ function split_get_meta_box( $meta_boxes ) {
 		'fields' => array(
 			array(
 				'id' => $prefix . 'sidebar_primary',
-				'name' => esc_html__( 'Primary Sidebar', 'split' ),
+				'name' => esc_html__( 'Primary Sidebar', 'splits' ),
 				'type' => 'select',
-				'placeholder' => esc_html__( 'Select a sidebar', 'split' ),
+				'placeholder' => esc_html__( 'Select a sidebar', 'splits' ),
 				'options' => $sidebars_choices,
 			),
 			array(
 				'id' => $prefix . 'layout',
 				'type' => 'image_select',
-				'name' => esc_html__( 'Layout', 'split' ),
+				'name' => esc_html__( 'Layout', 'splits' ),
 				'std' => 'inherit',
 				'force_delete' => false,
 				'max_file_uploads' => '4',
@@ -51,7 +51,7 @@ function split_get_meta_box( $meta_boxes ) {
 /* ------------------------------------ */	
 	$meta_boxes[] = array(
 		'id' => 'post-options',
-		'title' => esc_html__( 'Post Options', 'split' ),
+		'title' => esc_html__( 'Post Options', 'splits' ),
 		'post_types' => array( 'post' ),
 		'context' => 'advanced',
 		'priority' => 'high',
@@ -59,15 +59,15 @@ function split_get_meta_box( $meta_boxes ) {
 		'fields' => array(
 			array(
 				'id' => $prefix . 'sidebar_primary',
-				'name' => esc_html__( 'Primary Sidebar', 'split' ),
+				'name' => esc_html__( 'Primary Sidebar', 'splits' ),
 				'type' => 'select',
-				'placeholder' => esc_html__( 'Select a sidebar', 'split' ),
+				'placeholder' => esc_html__( 'Select a sidebar', 'splits' ),
 				'options' => $sidebars_choices,
 			),
 			array(
 				'id' => $prefix . 'layout',
 				'type' => 'image_select',
-				'name' => esc_html__( 'Layout', 'split' ),
+				'name' => esc_html__( 'Layout', 'splits' ),
 				'std' => 'inherit',
 				'force_delete' => false,
 				'max_file_uploads' => '4',
@@ -82,4 +82,4 @@ function split_get_meta_box( $meta_boxes ) {
 	
 	return $meta_boxes;
 }
-add_filter( 'rwmb_meta_boxes', 'split_get_meta_box' );
+add_filter( 'rwmb_meta_boxes', 'splits_get_meta_box' );
