@@ -1,10 +1,10 @@
 === Splits ===
 Contributors: alxmedia
 Requires at least: 5.0
-Tested up to: 6.0
+Tested up to: 6.1
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
-Tags: blog, one-column, two-columns, three-columns, right-sidebar, left-sidebar, custom-colors, custom-menu, featured-images, flexible-header, full-width-template, post-formats, sticky-post, theme-options, threaded-comments, translation-ready, custom-logo, custom-header, custom-background
+Tags: blog, one-column, two-columns, three-columns, right-sidebar, left-sidebar, custom-colors, custom-menu, featured-images, flexible-header, full-width-template, post-formats, sticky-post, theme-options, threaded-comments, translation-ready, custom-logo, custom-header, custom-background, news, entertainment, footer-widgets
 
 == Description ==
 
@@ -72,7 +72,29 @@ Screenshot images
 License: CC0 1.0 Universal (CC0 1.0)
 Source: https://stocksnap.io
 
+Left sidebar images
+1. https://stocksnap.io/photo/23H66MTGXA - CC0 1.0 Universal (CC0 1.0)
+2. https://stocksnap.io/photo/Y01VDYAX63 - CC0 1.0 Universal (CC0 1.0)
+
+Content images
+1. https://stocksnap.io/photo/UYYDN7X5IS - CC0 1.0 Universal (CC0 1.0)
+2. https://stocksnap.io/photo/UEQ0178WUT - CC0 1.0 Universal (CC0 1.0)
+3. https://stocksnap.io/photo/TNK87N7464 - CC0 1.0 Universal (CC0 1.0)
+4. https://stocksnap.io/photo/SA20YXQRC4 - CC0 1.0 Universal (CC0 1.0)
+5. https://stocksnap.io/photo/RKS9M8PY0X - CC0 1.0 Universal (CC0 1.0)
+6. https://stocksnap.io/photo/X4AAF4SU9Q - CC0 1.0 Universal (CC0 1.0)
+
+Right sidebar images
+1. https://stocksnap.io/photo/3VLGQNBZP2 - CC0 1.0 Universal (CC0 1.0)
+2. https://stocksnap.io/photo/Q3P6NCT23E - CC0 1.0 Universal (CC0 1.0)
+3. https://stocksnap.io/photo/13LKG0AGI0 - CC0 1.0 Universal (CC0 1.0)
+4. https://stocksnap.io/photo/M9AN4Y1HYC - CC0 1.0 Universal (CC0 1.0)
+5. https://stocksnap.io/photo/0KAT80KW5F - CC0 1.0 Universal (CC0 1.0)
+
 == Changelog ==
+
+= 1.5.0 - 2022-12-22 =
+* Changed theme from premium to free
 
 = 1.4.9 - 2022-05-30 =
 * Fixed ol and ul box-sizing content-box styling for WP 6.0
