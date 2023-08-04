@@ -100,6 +100,7 @@ Right sidebar images
 
 = 1.5.1 - 2023-08-04 =
 * Updated to Font Awesome 6.4.2
+* Updated to Kirki 4.2.0
 
 = 1.5.0 - 2022-12-22 =
 * Changed theme from premium to free
