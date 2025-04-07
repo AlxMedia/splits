@@ -8,7 +8,7 @@ Tags: blog, one-column, two-columns, three-columns, right-sidebar, left-sidebar,
 
 == Description ==
 
-Splits is a responsive 100% high resolution theme for blogs and magazines. The feature list is long: Unlimited accent colors, unlimited widget areas, sidebar to the right that can be uniquely specified for each page or post, 0-4 footer widget columns, almost zero layout images, related posts and post nav, featured stories and carousel, 5 post formats, good SEO, 2 flexible custom widgets, localisation support, social links, logo upload and many more useful admin panel features. Demo: http://demo.alx.media/x/?theme=Splits
+Splits is a responsive 100% high resolution theme for blogs and magazines. The feature list is long: Unlimited accent colors, unlimited widget areas, sidebar to the right that can be uniquely specified for each page or post, 0-4 footer widget columns, almost zero layout images, related posts and post nav, featured stories and carousel, 5 post formats, good SEO, 2 flexible custom widgets, localisation support, social links, logo upload and many more useful admin panel features. Demo: https://demo.agnarson.com/?theme=Splits
 
 == Installation ==
 
@@ -19,7 +19,7 @@ Splits is a responsive 100% high resolution theme for blogs and magazines. The f
 
 == Documentation ==
 
-http://alx.media/documentation/
+https://agnarson.com/documentation/
 
 == Copyright ==
 
